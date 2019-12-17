@@ -1,13 +1,15 @@
 import anycase/camel
-import anycase/pascal
-import anycase/snake
 import anycase/kebab
+import anycase/pascal
 import anycase/path
 import anycase/plain
+import anycase/snake
+import anycase/title
 
 export camel
-export pascal
-export snake
 export kebab
+export pascal
 export path
 export plain
+export snake
+export title
