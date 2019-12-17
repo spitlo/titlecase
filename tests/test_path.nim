@@ -20,3 +20,6 @@ suite "path":
   test "snake -> path":
     check path("change_my_case") == "change/my/case"
 
+  test "title -> path":
+    check path("Change My Case") == "changeMyCase"
+

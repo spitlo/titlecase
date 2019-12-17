@@ -20,3 +20,6 @@ suite "camel":
   test "snake -> camel":
     check camel("change_my_case") == "changeMyCase"
 
+  test "title -> camel":
+    check camel("Change My Case") == "changeMyCase"
+

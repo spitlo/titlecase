@@ -20,3 +20,6 @@ suite "kebab":
   test "snake -> kebab":
     check kebab("change_my_case") == "change-my-case"
 
+  test "title -> kebab":
+    check kebab("Change My Case") == "change-my-case"
+

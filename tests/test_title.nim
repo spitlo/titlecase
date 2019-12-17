@@ -2,21 +2,24 @@ import unittest
 import anycase/title
 
 suite "title":
-  test "title -> title":
-    check title("Change My Case") == "Change My Case"
+  test "plain -> title":
+    check title("the last of the mohicans") == "The Last of the Mohicans"
 
   test "path -> title":
-    check title("change/my/case") == "Change My Case"
+    check title("the/last/of/the/mohicans") == "The Last of the Mohicans"
 
   test "kebab -> title":
-    check title("change-my-case") == "Change My Case"
+    check title("the-last-of-the-mohicans") == "The Last of the Mohicans"
 
   test "camel -> title":
-    check title("changeMyCase") == "Change My Case"
+    check title("theLastOfTheMohicans") == "The Last of the Mohicans"
 
   test "pascal -> title":
-    check title("ChangeMyCase") == "Change My Case"
+    check title("TheLastOfTheMohicans") == "The Last of the Mohicans"
 
   test "snake -> title":
-    check title("change_my_case") == "Change My Case"
+    check title("the_last_of_the_mohicans") == "The Last of the Mohicans"
+
+  test "title -> title":
+    check title("The Last of the Mohicans") == "The Last of the Mohicans"
 

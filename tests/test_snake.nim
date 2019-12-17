@@ -20,3 +20,6 @@ suite "snake":
   test "snake -> snake":
     check snake("change_my_case") == "change_my_case"
 
+  test "title -> snake":
+    check snake("Change My Case") == "change_my_case"
+

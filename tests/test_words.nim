@@ -20,3 +20,6 @@ suite "words":
   test "snake -> words":
     check words("change_my_case") == @["change", "my", "case"]
 
+  test "title -> words":
+    check words("The Last of the Mohicans") == @["the", "last", "of", "the", "mohicans"]
+

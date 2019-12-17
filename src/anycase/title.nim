@@ -1,4 +1,4 @@
-import anycase/words
+import ./words
 from strutils import join, capitalizeAscii
 
 const smallWords = [
@@ -18,9 +18,9 @@ const smallWords = [
     "or",
     "the",
     "to",
-    "v[.]?",
+    "v",
     "via",
-    "vs[.]?",
+    "vs",
 ]
 
 proc title*(str: string): string =
@@ -32,6 +32,9 @@ proc title*(str: string): string =
       # First word, always capitalize
       newWords.add(capitalizeAscii(word))
     else:
-      newWords.add(word)
+      if find(smallWords, word) > -1:
+        newWords.add(word)
+      else:
+        newWords.add(capitalizeAscii(word))
 
   return join(newWords, " ")

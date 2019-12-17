@@ -20,3 +20,6 @@ suite "pascal":
   test "snake -> pascal":
     check pascal("change_my_case") == "ChangeMyCase"
 
+  test "title -> pascal":
+    check pascal("Change My Case") == "ChangeMyCase"
+
